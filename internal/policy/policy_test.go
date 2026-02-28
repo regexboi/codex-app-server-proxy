@@ -19,6 +19,10 @@ func TestMethodAllowBlockMatrix(t *testing.T) {
 	if _, err := engine.RewriteInbound(allowed, auth.Principal{Role: "user"}, false); err != nil {
 		t.Fatalf("skills/list should be allowed: %v", err)
 	}
+	allowed = map[string]any{"jsonrpc": "2.0", "id": 11, "method": "initialized", "params": map[string]any{}}
+	if _, err := engine.RewriteInbound(allowed, auth.Principal{Role: "user"}, false); err != nil {
+		t.Fatalf("initialized should be allowed: %v", err)
+	}
 
 	blocked := map[string]any{"jsonrpc": "2.0", "id": 2, "method": "account/read", "params": map[string]any{}}
 	if _, err := engine.RewriteInbound(blocked, auth.Principal{Role: "user"}, false); err == nil {

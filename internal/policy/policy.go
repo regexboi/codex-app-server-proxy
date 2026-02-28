@@ -107,7 +107,7 @@ func isAllowedMethod(method string) bool {
 	}
 
 	switch method {
-	case "initialize", "review/start", "model/list", "feedback/upload":
+	case "initialize", "initialized", "review/start", "model/list", "feedback/upload":
 		return true
 	default:
 		return false

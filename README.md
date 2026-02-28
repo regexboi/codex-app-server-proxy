@@ -59,3 +59,7 @@ go test ./...
 - `readyz` returns `503` when bootstrap auth is missing/invalid or plan type is not the configured required plan.
 - Session homes are created under `<data_dir>/sessions/<sessionId>/home`.
 - Each session is idle-reaped by `session_idle_ttl`.
+
+## UI Integration
+
+- UI handoff guide: `docs/UI_HANDOFF.md`
