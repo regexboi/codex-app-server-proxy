@@ -1,0 +1,9 @@
+# Local runtime config/secrets
+config.json
+.env
+
+# Local Codex proxy runtime state
+codex-remote/
+
+# OS noise
+.DS_Store

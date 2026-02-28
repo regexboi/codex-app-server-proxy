@@ -1,0 +1,24 @@
+{
+  "listen_addr": ":8080",
+  "workspace_root": "/srv/workspace",
+  "data_dir": "/var/lib/codex-proxy",
+  "service_codex_home": "/var/lib/codex-proxy/service-home",
+  "codex_binary_path": "codex",
+  "session_idle_ttl": "30m",
+  "max_sessions": 25,
+  "require_plan_type": "pro",
+  "ready_probe_ttl": "20s",
+  "ready_probe_timeout": "6s",
+  "api_keys": [
+    {
+      "id": "user-key-1",
+      "hash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+      "role": "user"
+    },
+    {
+      "id": "admin-key-1",
+      "hash": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+      "role": "admin"
+    }
+  ]
+}
